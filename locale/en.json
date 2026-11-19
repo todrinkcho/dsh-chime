@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Task chime and badge",
+    "description": "Chimes when a turn finishes and marks the taskbar button: green for a finished task, amber while a question or approval waits for you. Reading (focusing the window) dismisses it. Turns started from an IM bot (WeChat, Feishu, ...) are ignored."
+  }
+}

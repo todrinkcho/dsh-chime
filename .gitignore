@@ -1,0 +1,14 @@
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+
+# runtime artifacts of the plugin (written under $DSH_HOME/cache/task-chime-badge)
+*.log
+command.json
+command.json.tmp
+
+# editors / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

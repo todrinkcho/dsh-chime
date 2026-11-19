@@ -1,0 +1,43 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Syntax-check the Host half
+        run: node --check index.js
+      - name: Validate JSON resources
+        run: >
+          node -e "const fs=require('fs');for(const f of ['package.json','locale/en.json','locale/zh.json'])JSON.parse(fs.readFileSync(f,'utf8'));console.log('json ok')"
+      - name: Parse the helper script
+        shell: pwsh
+        run: |
+          $tokens = $null
+          $errors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile(
+            (Join-Path $PWD 'helper/taskbar-helper.ps1'), [ref]$tokens, [ref]$errors) | Out-Null
+          if ($errors) { $errors | Out-String | Write-Error; exit 1 }
+          Write-Host 'powershell syntax ok'
+      - name: Check manifest paths exist
+        shell: pwsh
+        run: |
+          $manifest = Get-Content package.json -Raw | ConvertFrom-Json
+          $missing = @()
+          foreach ($entry in $manifest.files) {
+            if ($entry.Contains('*')) {
+              if (-not (Get-ChildItem -Path $entry -ErrorAction SilentlyContinue)) { $missing += $entry }
+            } elseif (-not (Test-Path -LiteralPath $entry)) {
+              $missing += $entry
+            }
+          }
+          if ($missing) { Write-Error "missing files: $($missing -join ', ')"; exit 1 }
+          Write-Host 'manifest paths ok'

@@ -1,0 +1,58 @@
+{
+  "name": "dsh-task-chime-badge",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Chime and taskbar badge when a DeepSeek Harness turn finishes or the agent waits for your answer (Windows desktop shell).",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "helper/taskbar-helper.ps1",
+    "assets/done.wav",
+    "assets/ask.wav",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "notification",
+    "taskbar",
+    "overlay-badge",
+    "chime",
+    "windows"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "win32"
+  ],
+  "scripts": {
+    "check": "node --check index.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/todrinkcho/dsh-task-chime-badge.git"
+  },
+  "homepage": "https://github.com/todrinkcho/dsh-task-chime-badge#readme",
+  "bugs": {
+    "url": "https://github.com/todrinkcho/dsh-task-chime-badge/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

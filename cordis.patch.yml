@@ -1,0 +1,18 @@
+# Bundle patch for dsh-task-chime-badge.
+#
+# Windows-only behaviour: a chime and a taskbar overlay badge when a turn
+# finishes (green) or when the agent waits for the user (amber).
+- insert:
+    - id: task-chime-badge
+      name: 'dsh-task-chime-badge'
+      config:
+        enabled: true
+        chimeOnDone: true
+        chimeOnAsk: true
+        watchApprovals: true
+        # dsh-im 发起的回合跑完时不响、不亮绿点
+        ignoreImTurns: true
+        quietMs: 900
+        processName: 'DeepSeek Harness'
+        helperPollMs: 350
+        debug: true
