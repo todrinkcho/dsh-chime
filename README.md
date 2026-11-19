@@ -20,9 +20,10 @@ Windows only — the badge needs the desktop shell's taskbar button. In a browse
 
 Requirements: Windows 10/11 and the DeepSeek Harness desktop app. Node 18+ (ships with DSH). No admin rights, no build step, no dependencies.
 
-```powershell
-git clone https://github.com/todrinkcho/dsh-task-chime-badge.git
-```
+Get the folder, either way:
+
+- **No git** — download `dsh-task-chime-badge-1.0.0.zip` from [Releases](https://github.com/todrinkcho/dsh-task-chime-badge/releases/latest) and unzip it. The archive already contains one top-level `dsh-task-chime-badge/` folder.
+- **git** — `git clone https://github.com/todrinkcho/dsh-task-chime-badge.git`
 
 Then install that folder as a bundle, either:
 

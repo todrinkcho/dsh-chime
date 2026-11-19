@@ -20,9 +20,10 @@ IM 机器人（微信 / 飞书 / 钉钉等，经 dsh-im 接入）发起的回复
 
 要求：Windows 10/11 + DeepSeek Harness 桌面端；Node 18+（随 DSH 安装）。无需管理员权限、无需构建、无第三方依赖。
 
-```powershell
-git clone https://github.com/todrinkcho/dsh-task-chime-badge.git
-```
+先拿到目录，两种都行：
+
+- **不想装 git**：到 [Releases](https://github.com/todrinkcho/dsh-task-chime-badge/releases/latest) 下载 `dsh-task-chime-badge-1.0.0.zip` 解压，压缩包解开就是一个 `dsh-task-chime-badge/` 目录；
+- **用 git**：`git clone https://github.com/todrinkcho/dsh-task-chime-badge.git`。
 
 然后把这个目录当作 bundle 装上，两种方式任选：
 
