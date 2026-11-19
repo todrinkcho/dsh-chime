@@ -1,6 +1,7 @@
 # dsh-task-chime-badge
 
 [![ci](https://github.com/todrinkcho/dsh-task-chime-badge/actions/workflows/ci.yml/badge.svg)](https://github.com/todrinkcho/dsh-task-chime-badge/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/dsh-task-chime-badge.svg)](https://www.npmjs.com/package/dsh-task-chime-badge)
 
 给 DeepSeek Harness 的 Windows 桌面端加一层「跑完了叫我」：任务跑完响一声，并在 Harness 的任务栏按钮上留一个彩色圆点，直到你看过为止。
 
@@ -20,12 +21,14 @@ IM 机器人（微信 / 飞书 / 钉钉等，经 dsh-im 接入）发起的回复
 
 要求：Windows 10/11 + DeepSeek Harness 桌面端；Node 18+（随 DSH 安装）。无需管理员权限、无需构建、无第三方依赖。
 
-先拿到目录，两种都行：
+**用 npm**（不用下载）：在 **插件** 里装名为 `dsh-task-chime-badge` 的 bundle，或者让 agent 用 `plugin_manager` 的 `install_bundle`、target 填这个名字。（走 npmmirror 这类镜像的话，新版本要等镜像同步几分钟。）
 
-- **不想装 git**：到 [Releases](https://github.com/todrinkcho/dsh-task-chime-badge/releases/latest) 下载 `dsh-task-chime-badge-1.0.0.zip` 解压，压缩包解开就是一个 `dsh-task-chime-badge/` 目录；
-- **用 git**：`git clone https://github.com/todrinkcho/dsh-task-chime-badge.git`。
+**用 Release 的 zip**：到 [Releases](https://github.com/todrinkcho/dsh-task-chime-badge/releases/latest) 下载 `dsh-task-chime-badge-1.0.0.zip` 解压（里面就是一个 `dsh-task-chime-badge/` 目录），然后把这个目录当 bundle 装上：
 
-然后把这个目录当作 bundle 装上，两种方式任选：
+- **界面**：**插件** → **添加插件**，选中该目录；
+- **让 agent 装**：用 `plugin_manager` 的 `install_bundle`，target 填该目录的绝对路径。
+
+**用 git**：`git clone https://github.com/todrinkcho/dsh-task-chime-badge.git`，然后按上面两种方式之一装。
 
 - **界面**：**插件**（Plugins）→ **添加插件**，选中 clone 下来的目录；
 - **让 agent 装**：让它用 `plugin_manager` 的 `install_bundle`，target 填这个目录的绝对路径。

@@ -1,6 +1,7 @@
 # dsh-task-chime-badge
 
 [![ci](https://github.com/todrinkcho/dsh-task-chime-badge/actions/workflows/ci.yml/badge.svg)](https://github.com/todrinkcho/dsh-task-chime-badge/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/dsh-task-chime-badge.svg)](https://www.npmjs.com/package/dsh-task-chime-badge)
 
 「跑完了叫我」 — a "tell me when it's done" for the DeepSeek Harness Windows desktop shell: a chime when a turn finishes, plus a colored dot on the harness taskbar button that stays until you read it.
 
@@ -20,15 +21,14 @@ Windows only — the badge needs the desktop shell's taskbar button. In a browse
 
 Requirements: Windows 10/11 and the DeepSeek Harness desktop app. Node 18+ (ships with DSH). No admin rights, no build step, no dependencies.
 
-Get the folder, either way:
+**From npm** — nothing to download: in **Plugins**, install the bundle named `dsh-task-chime-badge`, or ask your agent to run `plugin_manager` with `install_bundle` and that name. (On a mirror registry such as npmmirror, give the mirror a few minutes to sync after a release.)
 
-- **No git** — download `dsh-task-chime-badge-1.0.0.zip` from [Releases](https://github.com/todrinkcho/dsh-task-chime-badge/releases/latest) and unzip it. The archive already contains one top-level `dsh-task-chime-badge/` folder.
-- **git** — `git clone https://github.com/todrinkcho/dsh-task-chime-badge.git`
+**From the release zip** — download `dsh-task-chime-badge-1.0.0.zip` from [Releases](https://github.com/todrinkcho/dsh-task-chime-badge/releases/latest), unzip it (the archive contains one top-level `dsh-task-chime-badge/` folder), then install that folder as a bundle:
 
-Then install that folder as a bundle, either:
+- **GUI** — **Plugins** → **Add plugin**, and pick the folder; or
+- **Agent** — ask your agent to run `plugin_manager` with `install_bundle` and the folder's absolute path.
 
-- **GUI** — **Plugins** → **Add plugin**, and pick the cloned folder; or
-- **Agent** — ask your agent to run `plugin_manager` with `install_bundle` and the absolute path of the cloned folder.
+**From git** — `git clone https://github.com/todrinkcho/dsh-task-chime-badge.git`, then one of the two ways above.
 
 Check that the row **Task chime and badge** is enabled in **Plugins**, then start a turn and switch to another window to see the green dot. This is a Host-only bundle: there is nothing on npm, the checkout itself is the package (`dsh.bundle.patch` points at `cordis.patch.yml`).
 
