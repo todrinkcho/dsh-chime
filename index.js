@@ -1,5 +1,5 @@
 /**
- * dsh-task-chime-badge — Host half.
+ * @todrink/dsh-chime — Host half.
  *
  * Turns the DeepSeek Harness taskbar button into a notification surface for the
  * Windows desktop shell:
@@ -23,7 +23,7 @@ import { join } from 'node:path';
 import { homedir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 
-export const name = 'dsh-task-chime-badge';
+export const name = '@todrink/dsh-chime';
 
 const PACKAGE_ROOT = fileURLToPath(new URL('.', import.meta.url));
 const HELPER_SCRIPT = join(PACKAGE_ROOT, 'helper', 'taskbar-helper.ps1');

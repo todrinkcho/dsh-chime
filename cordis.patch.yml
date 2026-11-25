@@ -1,10 +1,10 @@
-# Bundle patch for dsh-task-chime-badge.
+# Bundle patch for @todrink/dsh-chime.
 #
 # Windows-only behaviour: a chime and a taskbar overlay badge when a turn
 # finishes (green) or when the agent waits for the user (amber).
 - insert:
     - id: task-chime-badge
-      name: 'dsh-task-chime-badge'
+      name: '@todrink/dsh-chime'
       config:
         enabled: true
         chimeOnDone: true

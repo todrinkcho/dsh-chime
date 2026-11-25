@@ -1,7 +1,7 @@
-# dsh-task-chime-badge
+# @todrink/dsh-chime
 
 [![ci](https://github.com/todrinkcho/dsh-task-chime-badge/actions/workflows/ci.yml/badge.svg)](https://github.com/todrinkcho/dsh-task-chime-badge/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/dsh-task-chime-badge.svg)](https://www.npmjs.com/package/dsh-task-chime-badge)
+[![npm](https://img.shields.io/npm/v/@todrink/dsh-chime.svg)](https://www.npmjs.com/package/@todrink/dsh-chime)
 
 给 DeepSeek Harness 的 Windows 桌面端加一层「跑完了叫我」：任务跑完响一声，并在 Harness 的任务栏按钮上留一个彩色圆点，直到你看过为止。
 
@@ -21,9 +21,9 @@ IM 机器人（微信 / 飞书 / 钉钉等，经 dsh-im 接入）发起的回复
 
 要求：Windows 10/11 + DeepSeek Harness 桌面端；Node 18+（随 DSH 安装）。无需管理员权限、无需构建、无第三方依赖。
 
-**用 npm**（不用下载）：侧栏进 **插件**，点右上 **添加插件**，在包名输入框里填 `dsh-task-chime-badge`（可带版本，如 `dsh-task-chime-badge@1.0.0`），再点 **安装**。也可以让 agent 用 `plugin_manager` 的 `install_bundle`、target 填同一个名字。新版本到 npmmirror 这类镜像要几分钟；如果提示找不到包，在对话框的 **Registry** 里改选官方 npm 源再试。
+**用 npm**（不用下载）：侧栏进 **插件**，点右上 **添加插件**，在包名输入框里填 `@todrink/dsh-chime`（可带版本，如 `@todrink/dsh-chime@1.0.0`），再点 **安装**。也可以让 agent 用 `plugin_manager` 的 `install_bundle`、target 填同一个名字。新版本到 npmmirror 这类镜像要几分钟；如果提示找不到包，在对话框的 **Registry** 里改选官方 npm 源再试。
 
-**用 Release 的 zip**：到 [Releases](https://github.com/todrinkcho/dsh-task-chime-badge/releases/latest) 下载 `dsh-task-chime-badge-1.0.0.zip` 解压（里面就是一个 `dsh-task-chime-badge/` 目录），然后把这个目录当 bundle 装上：
+**用 Release 的 zip**：到 [Releases](https://github.com/todrinkcho/dsh-task-chime-badge/releases/latest) 下载 `@todrink/dsh-chime-1.0.0.zip` 解压（里面就是一个 `@todrink/dsh-chime/` 目录），然后把这个目录当 bundle 装上：
 
 - **界面**：**插件** → **添加插件**，选中该目录；
 - **让 agent 装**：用 `plugin_manager` 的 `install_bundle`，target 填该目录的绝对路径。

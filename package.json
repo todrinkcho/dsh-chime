@@ -1,5 +1,5 @@
 {
-  "name": "dsh-task-chime-badge",
+  "name": "@todrink/dsh-chime",
   "version": "1.0.0",
   "type": "module",
   "description": "Chime and taskbar badge when a DeepSeek Harness turn finishes or the agent waits for your answer (Windows desktop shell).",
@@ -33,7 +33,8 @@
     "windows"
   ],
   "engines": {
-    "node": ">=18"
+    "node": ">=18",
+    "dsh": ">=0.2.2-rc.5"
   },
   "os": [
     "win32"
@@ -54,5 +55,9 @@
     "bundle": {
       "patch": "./cordis.patch.yml"
     }
+  },
+  "author": {
+    "name": "todrink",
+    "url": "https://github.com/todrinkcho"
   }
 }
