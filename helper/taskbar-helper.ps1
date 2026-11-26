@@ -2,7 +2,7 @@
 <#
   Taskbar badge + chime helper for the DSH desktop shell.
 
-  Started by the Host plugin half (@local/task-chime-badge) as a long-lived
+  Started by the Host plugin half (@todrink/dsh-chime) as a long-lived
   background process. It watches a small JSON command file written by the
   plugin and reflects it on the DeepSeek Harness taskbar button:
 

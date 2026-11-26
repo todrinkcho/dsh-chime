@@ -1,6 +1,6 @@
 {
   "name": "@todrink/dsh-chime",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Chime and taskbar badge when a DeepSeek Harness turn finishes or the agent waits for your answer (Windows desktop shell).",
   "exports": {
