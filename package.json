@@ -1,6 +1,6 @@
 {
   "name": "@todrink/dsh-chime",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "description": "Chime and taskbar badge when a DeepSeek Harness turn finishes or the agent waits for your answer (Windows desktop shell).",
   "exports": {
@@ -45,11 +45,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/todrinkcho/dsh-task-chime-badge.git"
+    "url": "git+https://github.com/todrinkcho/dsh-chime.git"
   },
-  "homepage": "https://github.com/todrinkcho/dsh-task-chime-badge#readme",
+  "homepage": "https://github.com/todrinkcho/dsh-chime#readme",
   "bugs": {
-    "url": "https://github.com/todrinkcho/dsh-task-chime-badge/issues"
+    "url": "https://github.com/todrinkcho/dsh-chime/issues"
   },
   "dsh": {
     "bundle": {

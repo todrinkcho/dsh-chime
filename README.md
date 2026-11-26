@@ -1,6 +1,6 @@
 # @todrink/dsh-chime
 
-[![ci](https://github.com/todrinkcho/dsh-task-chime-badge/actions/workflows/ci.yml/badge.svg)](https://github.com/todrinkcho/dsh-task-chime-badge/actions/workflows/ci.yml)
+[![ci](https://github.com/todrinkcho/dsh-chime/actions/workflows/ci.yml/badge.svg)](https://github.com/todrinkcho/dsh-chime/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/@todrink/dsh-chime.svg)](https://www.npmjs.com/package/@todrink/dsh-chime)
 
 「跑完了叫我」 — a "tell me when it's done" for the DeepSeek Harness Windows desktop shell: a chime when a turn finishes, plus a colored dot on the harness taskbar button that stays until you read it.
@@ -23,12 +23,12 @@ Requirements: Windows 10/11 and the DeepSeek Harness desktop app. Node 18+ (ship
 
 **From npm** — nothing to download. Open **Plugins** in the sidebar, click **Add plugin**, type `@todrink/dsh-chime` in the package field (a version is optional, e.g. `@todrink/dsh-chime@1.0.0`), then click **Install**. Or ask your agent to run `plugin_manager` with `install_bundle` and the same name. A freshly published version takes a few minutes to reach a mirror registry such as npmmirror; if the install says the package is missing, pick the official npm registry in the dialog's **Registry** selector and retry.
 
-**From the release zip** — download `@todrink/dsh-chime-1.0.0.zip` from [Releases](https://github.com/todrinkcho/dsh-task-chime-badge/releases/latest), unzip it (the archive contains one top-level `@todrink/dsh-chime/` folder), then install that folder as a bundle:
+**From the release zip** — download `dsh-chime-1.0.3.zip` from [Releases](https://github.com/todrinkcho/dsh-chime/releases/latest), unzip it (the archive contains one top-level `@todrink/dsh-chime/` folder), then install that folder as a bundle:
 
 - **GUI** — **Plugins** → **Add plugin**, and pick the folder; or
 - **Agent** — ask your agent to run `plugin_manager` with `install_bundle` and the folder's absolute path.
 
-**From git** — `git clone https://github.com/todrinkcho/dsh-task-chime-badge.git`, then one of the two ways above.
+**From git** — `git clone https://github.com/todrinkcho/dsh-chime.git`, then one of the two ways above.
 
 Check that the row **Task chime and badge** is enabled in **Plugins**, then start a turn and switch to another window to see the green dot. This is a Host-only bundle: there is nothing on npm, the checkout itself is the package (`dsh.bundle.patch` points at `cordis.patch.yml`).
 
